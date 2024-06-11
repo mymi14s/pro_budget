@@ -1,7 +1,7 @@
 [project]
 name = "pro_budget"
 authors = [
-    { name = "Theoskaris", email = "info@theoskaris.com"}
+    { name = "Anthony Emmanuel", email = "mymi14s@hotmail.com"}
 ]
 description = "Budgeting modification that allows manual entry of monthget"
 requires-python = ">=3.10"

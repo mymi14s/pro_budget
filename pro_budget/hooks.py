@@ -1,8 +1,8 @@
 app_name = "pro_budget"
 app_title = "Pro Budget"
-app_publisher = "Theoskaris"
+app_publisher = "Anthony Emmanuel"
 app_description = "Budgeting modification that allows manual entry of monthget"
-app_email = "info@theoskaris.com"
+app_email = "info@Anthony Emmanuel.com"
 app_license = "MIT"
 
 # Includes in <head>
@@ -27,7 +27,9 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Budget" : "public/js/doctype/budget.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -116,13 +118,14 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Budget": {
+		"validate": "pro_budget.events.budget.validate",
+	},
+    "Monthly Distribution": {
+		"validate": "pro_budget.events.budget.validate",
+	},
+}
 
 # Scheduled Tasks
 # ---------------
