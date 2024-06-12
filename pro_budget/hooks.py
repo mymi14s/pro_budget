@@ -122,9 +122,6 @@ doc_events = {
 	"Budget": {
 		"validate": "pro_budget.events.budget.validate",
 	},
-    "Monthly Distribution": {
-		"validate": "pro_budget.events.budget.validate",
-	},
 }
 
 # Scheduled Tasks
