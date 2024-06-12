@@ -41,7 +41,8 @@ def validate(doc, event=None):
             monthly_distibution_data_total = round(sum(monthly_distibution_data.values()), 2) 
             doc = create_update_distribution(doc, monthly_distibution_data, monthly_distibution_data_total)
     except Exception as e:
-        frappe.throw(e)
+        frappe.log_error(message=frappe.get_traceback(), title='Budget')
+        frappe.throw(str(e))
 
 
 def create_update_distribution(doc, monthly_distibution_data, monthly_distibution_data_total):
